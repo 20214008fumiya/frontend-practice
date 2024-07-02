@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      .row div:nth-of-type(1) {
+        background-color: red;
+      }
+      .row div:nth-of-type(2) {
+        background-color: yellow;
+      }
+      .row div:nth-of-type(3) {
+        background-color: blue;
+      }
+      .row div:nth-of-type(4) {
+        background-color: green;
+      }
+    </style>
+    <title>5-1_grid.html</title>
+  </head>
+  <body>
+    <div class="TODO">
+      <h2>コンテンツ１</h2>
+      <h3>1行目</h3>
+      <div class="TODO">
+        <div class="TODO">1行目1列目</div>
+        <div class="TODO">1行目2列目</div>
+        <div class="TODO">1行目3列目</div>
+      </div>
+      <h3>２行目</h3>
+      <div class="TODO">
+        <div class="TODO">2行目1列目</div>
+        <div class="TODO">2行目2列目</div>
+      </div>
+      <h2>コンテンツ２</h2>
+      <h3>1行目</h3>
+      <div class="row">
+        <div class="col-2">1行目1列目</div>
+        <div class="col-2">2行目2列目</div>
+        <div class="col-2">3行目3列目</div>
+        <div class="col-6">4行目4列目</div>
+      </div>
+    </div>
+    <!-- CDN : Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "MS-CEINTL.vscode-language-pack-ja",
+    "esbenp.prettier-vscode",
+    "ritwickdey.LiveServer",
+    "ecmel.vscode-html-css",
+    "smelukov.vscode-csstree",
+    "Zignd.html-css-class-completion",
+    "formulahendry.auto-rename-tag",
+    "mosapride.zenkaku",
+    "oderwat.indent-rainbow",
+    "vscode-icons-team.vscode-icons"
+  ]
+}

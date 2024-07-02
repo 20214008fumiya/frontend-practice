@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*ローディング */
+#loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: #0bd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* TODO */
+}
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: 200px auto;
+    background-color: #fff;
+    /* TODO */
+
+}
+/* ローディングアニメーション */
+/* TODO */
+
+ /* TODO */ 

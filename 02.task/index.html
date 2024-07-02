@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Twitto</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- CDN : Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 order-lg-first col-4 order-last">
+          <nav class="mt-4">
+            <div class="container">
+              <!-- ナビゲーションメニュー -->
+              <ul class="nav-menu">
+                <li>
+                  <a class="menu-link" href="index.html"><img src="./images/icon.svg" class="logo" /></a>
+                </li>
+                <li class="menu-item pointer">
+                  <a class="menu-link" href="index.html"
+                    ><img src="./images/house.svg" class="menu-icon pointer" /><span class="menu">ホーム</span></a
+                  >
+                </li>
+                <li class="menu-item pointer">
+                  <img src="./images/search.svg" class="menu-icon pointer" /><span class="menu">話題を検索</span>
+                </li>
+                <li class="menu-item pointer">
+                  <img src="./images/bell.svg" class="menu-icon pointer" /><span class="menu">通知</span>
+                </li>
+                <li class="menu-item pointer">
+                  <img src="./images/mail.svg" class="menu-icon pointer" /><span class="menu">メッセージ</span>
+                </li>
+                <li class="menu-item pointer">
+                  <img src="./images/certification.svg" class="menu-icon pointer" /><span class="menu">認証済み</span>
+                </li>
+                <li class="menu-item pointer">
+                  <img src="./images/people.svg" class="menu-icon pointer" /><span class="menu">プロフィール</span>
+                </li>
+                <li id="main-btn" class="tweet-btn pointer">ついっとする</li>
+                <li id="sub-btn" class="menu-item pointer">
+                  <img src="./images/twwit-btn.svg" class="menu-icon pointer" />
+                </li>
+              </ul>
+            </div>
+            <div class="login-user">
+              <a href="#"><img src="./images/person-circle.svg" class="menu-icon" id="user" /></a>
+              <span id="username">名無し</span>
+              <!-- ドロップダウンメニュー -->
+              <div>
+                <a href="#">既存アカウントを追加</a>
+                <a href="#" onclick="remove()">ログアウト</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-lg-6 col-12">
+          <!-- メインコンテンツ -->
+          <main class="mt-4">
+            <div class="container">
+              <!-- タブパネル -->
+              <div class="main-header">
+                <h3>ホーム</h3>
+                <a href="#">おすすめ</a>
+                <a href="#">フォロー中</a>
+              </div>
+              <!-- 入力フォーム -->
+              <div class="input">
+                <form id="form">
+                  <div class="row">
+                    <div class="col-1">
+                      <img src="./images/person-circle.svg" class="icon user-icon" />
+                    </div>
+                    <div class="col-11">
+                      <div class="inputCount">
+                        <textarea id="message" name="message" rows="3" placeholder="いまどうしてる？"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tweet-item">
+                    <span id="count">0</span>
+                    <img src="./images/media.svg" class="tweet-icon pointer" />
+                    <a href="#" onclick="remove()">ログアウト</a>
+
+                    <!-- TODO -->
+                    <img src="./images/map.svg" onclick="Geolocation()" class="tweet-icon pointer" id="geo" />
+                    <div id="map"></div>
+
+                    <button class="tweet-btn right" id="send-btn">ついっとする</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- メッセージ履歴 -->
+              <div class="message-history">
+                <ul id="output" class="msg-list">
+                  <li class="msg">
+                    <strong>名無し</strong><small>[20xx-07-01 14:06:04]</small>
+                    <div class="tweet">
+                      <span>ついっとのメッセージ投稿3件目</span>
+                      <img src="images/pencil.svg" class="edit pointer" />
+                      <img src="images/trash.svg" class="delete pointer" />
+                      <div class="card"><img src="./images/image3.jpg" class="small-img" /></div>
+                    </div>
+                  </li>
+                  <li class="msg">
+                    <strong>名無し</strong><small>[20xx-07-01 14:06:04]</small>
+                    <div class="tweet">
+                      <span>ついっとのメッセージ投稿2件目</span>
+                      <img src="images/pencil.svg" class="edit pointer" />
+                      <img src="images/trash.svg" class="delete pointer" />
+                      <div class="card"><img src="./images/image2.jpg" class="small-img" /></div>
+                    </div>
+                  </li>
+                  <li class="msg">
+                    <strong>名無し</strong><small>[20xx-07-01 14:06:04]</small>
+                    <div class="tweet">
+                      <span>ついっとのメッセージ投稿1件目</span>
+                      <img src="images/pencil.svg" class="edit pointer" />
+                      <img src="images/trash.svg" class="delete pointer" />
+                      <div class="card"><img src="./images/image1.jpg" class="small-img" /></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div class="col-lg-3 order-lg-last col-8 order-last">
+          <!-- サイドバー -->
+          <aside class="mt-4">
+            <div class="container">
+              <div class="follow side-card">
+                <h5>おすすめユーザー</h5>
+                <p>
+                  <img src="./images/user1.svg" class="menu-icon" />
+                  <span>ユーザー１</span>
+                  <button class="follow-btn">フォロー</button>
+                </p>
+                <p>
+                  <img src="./images/user2.svg" class="menu-icon" />
+                  <span>ユーザー２</span>
+                  <button class="follow-btn">フォロー</button>
+                </p>
+                <p>
+                  <img src="./images/user3.svg" class="menu-icon" />
+                  <span>ユーザー３</span>
+                  <button class="follow-btn">フォロー</button>
+                </p>
+              </div>
+              <div class="countdown side-card">
+                <table>
+                  <tr>
+                    <h5>卒業まで</h5>
+                  </tr>
+                  <p>あと<span id="timer"></span></p>
+                </table>
+              </div>
+              <div class="weather side-card">
+                <h5>札幌の<span id="tomorrow">XXX</span>の天気予報</h5>
+                <table>
+                  <tr>
+                    <th>天気</th>
+                    <td><span id="weather">XXX</span><img id="weather-img" src="" /></td>
+                  </tr>
+                  <tr>
+                    <th>降水確率：</th>
+                    <td id="rainy">10%</td>
+                  </tr>
+                  <tr>
+                    <th>最高気温：</th>
+                    <td id="temp-max">14℃</td>
+                  </tr>
+                  <tr>
+                    <th>最低気温：</th>
+                    <td id="temp-min">25℃</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="pokemon side-card">
+                <h5>今日のポケモン</h5>
+                <table>
+                  <tr>
+                    <th>aa</th>
+                    <td><span id="pokename">namae</span></td>
+                  </tr>
+                  <tr>
+                    <th>a</th>
+                    <td><img id="pokemon-img" src="" />img</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+  </body>
+
+  <!-- CDN : Bootstrap Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Original Scripts -->
+  <script src="js/login.js"></script>
+  <script src="js/logout.js"></script>
+  <script src="js/location.js"></script>
+  <script src="js/verify.js"></script>
+  <script src="js/check.js"></script>
+  <script src="js/count.js"></script>
+  <script src="js/weather-api.js"></script>
+  <script src="js/pokemon -api.js"></script>
+</html>

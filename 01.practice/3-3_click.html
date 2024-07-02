@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>3-3_click</title>
+  </head>
+  <body>
+    <h1>ボタンクリックのイベントを制御する</h1>
+    <h2>ボタンがクリックされた時、アラートを表示する</h2>
+    <form action="./sample.html">
+      <input type="submit" onclick="return check()" value="送信" />
+    </form>
+    <button onclick="check()">確認</button>
+    <p onclick="check()">ここを押すとアラート表示</p>
+    <script src="click.js"></script>
+  </body>
+</html>

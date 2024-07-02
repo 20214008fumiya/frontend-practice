@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>6-1_dmenu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      header {
+        margin: 20px;
+      }
+
+      .dropdown {
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ヘッダー -->
+      <header>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdown1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            ドロップダウン
+          </button>
+          <!-- ドロップダウンメニュー -->
+          <div class="dropdown-menu" aria-labelledby="dropdown1">
+            <a class="dropdown-item" href="#">アイテム1</a>
+            <a class="dropdown-item" href="#">アイテム2</a>
+            <a class="dropdown-item" href="#">アイテム3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" id="dropdown2" TODO aria-expanded="false">
+            <img src="three-dots.svg" id="icon1" width="48px" height="48px" />
+          </a>
+          <!-- ドロップダウンメニュー -->
+          <div class="TODO" aria-labelledby="dropdown2">
+            <a class="TODO" href="#">アイテム4</a>
+            <a class="TODO" href="#">アイテム5</a>
+            <a class="TODO" href="#">アイテム6</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <h1>ドロップダウンメニュー</h1>
+          <h2>クリックするとサブメニューを表示</h2>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

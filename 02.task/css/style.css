@@ -1,0 +1,157 @@
+/* ナビゲーションメニュースタイル */
+nav {
+  width: 300px;
+  /* TODO */
+  padding-left: 20px;
+  border-right: solid 0.5px #efefef;
+}
+.logo {
+  /* TODO */
+  height: 32px;
+  width: 32px;
+}
+.nav-menu {
+  /* TODO */
+  list-style: none;
+  margin-right: 20px;
+}
+.menu-link {
+  text-decoration: none;
+  color: black;
+}
+.nav-menu li {
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+.menu-item:hover {
+  background-color: #efefef;
+  border-radius: 25px;
+  color: black;
+}
+.menu-icon {
+  height: 32px;
+  width: 32px;
+  margin-right: 20px;
+}
+#sub-btn {
+  display: none;
+}
+
+.login-user {
+  margin: 50px 0;
+  margin-left: 30px;
+}
+
+.icon {
+  height: 64px;
+  width: 64px;
+}
+.pointer {
+  cursor: pointer;
+}
+
+/* メインスタイル */
+/* TODO */
+main {
+  margin: 0 auto;
+  width: 90%;
+  min-width: 450px;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  height: 90px;
+  background-color: white;
+  border-bottom: solid 0.5px #efefef;
+}
+
+textarea {
+  border: none;
+  border-bottom: solid 0.5px #efefef;
+  outline: none;
+  width: 100%;
+}
+
+.tweet-item {
+  position: relative;
+}
+.tweet-btn {
+  border-radius: 25px;
+  padding: 5px 15px;
+}
+.btn-large {
+  width: 80%;
+}
+
+.input {
+  margin-top: 80px;
+}
+.user-icon {
+  width: 32px;
+  height: 32px;
+}
+.tweet-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+.right {
+  position: absolute;
+  right: 0;
+}
+.message-history {
+  margin-top: 30px;
+}
+.msg-list li {
+  margin-left: -45px;
+  margin-right: -10px;
+  list-style-type: none;
+  padding: 10px;
+}
+.msg {
+  font-size: 1.2em;
+}
+.msg:hover {
+  /* TODO */
+  background-color: #f7f7f7;
+}
+.small-img {
+  width: 100%;
+  height: 50%;
+}
+.tweet {
+  margin: 10px 20px;
+}
+.card {
+  overflow: hidden;
+  border-radius: 8px;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+}
+
+/* サイドバースタイル */
+aside {
+  width: 300px;
+  border-left: solid 0.5px #efefef;
+}
+.side-card {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* TODO */
+  border-radius: 8px;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  border-bottom: solid 1px #888;
+}
+
+.follow-btn {
+  border-radius: 25px;
+  padding: 5px 15px;
+}

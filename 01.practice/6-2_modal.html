@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>6-2_modal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      header {
+        margin: 20px;
+      }
+
+      .dropdown {
+        display: inline-block;
+      }
+
+      .modal-img_footer {
+        padding: 0.5em;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdown1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            ドロップダウン
+          </button>
+          <!-- ドロップダウンメニュー -->
+          <div class="dropdown-menu" aria-labelledby="dropdown1">
+            <a class="dropdown-item" href="#" TODO>アイテム1</a>
+            <a class="dropdown-item" href="#" TODO>アイテム2</a>
+            <a class="dropdown-item" href="#" TODO>アイテム3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="three-dots.svg" id="icon1" width="48px" height="48px" />
+          </a>
+          <!-- ドロップダウンメニュー -->
+          <div class="dropdown-menu" aria-labelledby="dropdown2">
+            <a class="dropdown-item" href="#">アイテム4</a>
+            <a class="dropdown-item" href="#">アイテム5</a>
+            <a class="dropdown-item" href="#">アイテム6</a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <h1>モーダルウィンドウ</h1>
+        <h2>元のウィンドウの上に別枠でウィンドウを表示する</h2>
+        <img src="./img_thum.jpg" TODO />
+      </main>
+    </div>
+    <!-- モーダルウィンドウ1 -->
+    <div
+      class="modal fade"
+      id="menu1Modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="menu1ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="menu1ModalLabel">モーダルウィンドウ1</h5>
+          </div>
+          <div class="modal-body">
+            <p>表示したいテキスト1</p>
+            <hr />
+            <p>表示したいテキスト2</p>
+            <hr />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- モーダルウィンドウ2 -->
+    <div class="TODO" id="TODO" tabindex="-1" role="dialog" aria-labelledby="menu2ModalLabel" aria-hidden="true">
+      <div class="TODO" role="document">
+        <div class="TODO">
+          <div class="TODO">
+            <h5 class="TODO" id="menu2ModalLabel">モーダルウィンドウ2</h5>
+          </div>
+          <div class="TODO">
+            <p>表示したいテキスト3</p>
+            <hr />
+            <p>表示したいテキスト4</p>
+            <hr />
+          </div>
+          <div class="TODO">
+            <button type="button" class="btn btn-secondary" TODO>閉じる</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- モーダルウィンドウ3 -->
+    <div
+      class="modal fade"
+      id="menu3Modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="menu3ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="menu3ModalLabel">モーダルウィンドウ3(入力フォーム)</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">テキスト:</label>
+                <input type="text" class="form-control" id="recipient-name" />
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">テキストエリア:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- モーダルウィンドウ4 -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg modal-middle">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="./img.jpg" width="100%" />
+          </div>
+          <div class="modal-img_footer">
+            <p>モーダルウィンドウ</p>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
